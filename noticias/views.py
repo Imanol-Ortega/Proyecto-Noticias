@@ -5,4 +5,17 @@ from .models import noticias, grupos, usuarios, comentarios
 
 class NoticiasApi(viewsets.ModelViewSet):
     serializer_class = NoticiasSerializer
-    querySet =  noticias.objects.all()
+    queryset =  noticias.objects.all()
+
+class UsuariosApi(viewsets.ModelViewSet):
+    serializer_class = UsuariosSerializer
+    queryset = usuarios.objects.all()
+
+class ComentariosApi(viewsets.ModelViewSet):
+    serializer_class = ComentariosSerializer
+    queryset = comentarios.objects.all()
+
+
+class GruposApi(viewsets.ModelViewSet):
+    serializer_class = GruposSerializer
+    queryset =  grupos.objects.all()
