@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'coreapi',
+    'rest_framework.authtoken',
     'noticias'
 ]
 
@@ -156,9 +157,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Cors Authorization 
-CORS_ALLOWED_ORIGINS = ["http://localhost:5173/"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
 
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 }

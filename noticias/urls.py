@@ -10,6 +10,8 @@ router.register(r'usuarios',views.UsuariosApi, 'usuarios')
 router.register(r'grupos',views.GruposApi, 'grupos')
 router.register(r'comentarios',views.ComentariosApi, 'comentarios')
 
+
+
 urlpatterns = [
     path('api/',include(router.urls)),
     path('docs/', include_docs_urls(title="Noticias API"))

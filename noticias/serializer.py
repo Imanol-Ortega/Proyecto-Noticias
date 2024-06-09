@@ -1,11 +1,12 @@
 from rest_framework import serializers
 from .models import noticias, grupos, usuarios, comentarios
+from rest_framework.authtoken.models import Token
 
 
 class NoticiasSerializer(serializers.ModelSerializer):
     class Meta:
         model = noticias
-        #fields = ('id','titulo','cuerpo','imagen','autor','grupo','fecha')
+        
         fields = '__all__'
 
 class UsuariosSerializer(serializers.ModelSerializer):
@@ -22,3 +23,4 @@ class GruposSerializer(serializers.ModelSerializer):
     class Meta:
         model = grupos
         fields = '__all__'
+
